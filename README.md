@@ -2,67 +2,39 @@
 
 # TyporaX
 
-TyporaX is a modular web application for **language learning** and **content management**.  
-It is designed with scalability and modularity in mind, combining a Flask backend, RESTful API endpoints, and a clean browser-based interface.
+TyporaX is a modular web app for **language learning** and **content management** with a scalable Flask backend and a browser-based UI.
 
 ---
 
 ## Overview
 
-TyporaX enables users to learn and manage language content interactively through a combination of web modules and AI integration.  
-It supports user authentication, practice exercises, audio handling, and administrative tools.
+- Interactive language learning with AI integration  
+- Supports user authentication, practice, audio, and admin tools
 
 ---
 
 ## Architecture
 
-### Client
-- Browser-based UI built with **HTML**, **CSS**, and **JavaScript**
-- Communicates via REST API with Flask backend
-
-### Backend
-- **Flask** application structured using **blueprints** for modularity:
-  - `admin`
-  - `audio`
-  - `auth`
-  - `practice`
-  - `word bank`
-- Implements business logic, authentication, email notifications, and external API integration
-
-### Database
-- **SQLite** for local development and testing  
-- **PostgreSQL** for production deployments
-
-### Storage
-- User-generated and text files stored either **locally** or in **Google Cloud Storage**
-
-### External Services
-- **OpenAI** integration for language model features  
-- **PayPal** for payment processing  
-- **SMTP** or third-party email providers for notification delivery
+- **Client:** Browser UI using HTML, CSS, JavaScript; communicates via REST API  
+- **Backend:** Flask with modular blueprints (`admin`, `audio`, `auth`, `practice`, `word bank`)  
+- **Database:** SQLite (local), PostgreSQL (production)  
+- **Storage:** Local file system or Google Cloud Storage  
+- **External Services:** OpenAI (LLM), PayPal (payments), SMTP/email providers
 
 ---
 
-## DevOps and Deployment
+## Deployment
 
-TyporaX supports cloud and containerized deployments for easy scaling and continuous integration.
-
-- **Containerization:** Docker, Procfile  
-- **Deployment Configuration:** `render.yaml`, `requirements.txt`, deployment documentation  
-- Supports one-command setup for Render, Railway, or Docker-based environments
+- Containerized using Docker, with `Procfile` and `render.yaml` for cloud deployment  
+- Supports one-command setup on Render, Railway, or Docker environments
 
 ---
 
-## Key Design Principles
+## Design Principles
 
-- Modular architecture via Flask blueprints  
-- Clear separation of concerns  
-- Secure authentication and data handling  
-- Scalable and cloud-ready configuration  
-- Easy switching between local (SQLite) and production (PostgreSQL) databases
+- Modular architecture with clear separation of concerns  
+- Secure authentication and scalable cloud-ready design  
+- Easy switching between local and production databases
 
 ---
 
-## Summary
-
-**TyporaX** combines robust backend engineering with educational practicality, offering a complete platform for interactive language learning, secure user management, and scalable deployment in modern web infrastructure.
